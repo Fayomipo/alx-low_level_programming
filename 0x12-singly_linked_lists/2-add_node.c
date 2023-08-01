@@ -11,7 +11,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
-	size_t addr = 0;
+	unsigned int addr = 0;
 
 	while (str[addr])
 		addr++;
@@ -21,7 +21,7 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 
 	new->str = strdup(str);
-	new->addr = addr;
+	new->len = addr;
 	new->next = *head;
 	*head = new;
 
