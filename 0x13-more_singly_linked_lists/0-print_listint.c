@@ -6,15 +6,18 @@
  *
  * Return: nodes.
  */
+
 size_t print_listint(const listint_t *h)
 {
-	size_t nnodes = 0;
+	size_t ele = 0;
 
 	while (h != NULL)
 	{
 		printf("%d\n", h->n);
+		ele++;
 		h = h->next;
-		nnodes++;
 	}
-	return (nnodes);
+
+	return (ele);
 }
+
